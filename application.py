@@ -1,18 +1,18 @@
 #!flask/bin/python
 import optparse
 import os, sys, re, json, requests
+from flask import jsonify, Flask
 
-from app import init_app
+# from app import init_app
 from flaskrun import flaskrun
-from flask import jsonify
 
-application = init_app()
+application = Flask(__name__)
 
 WAVEBET_URL = "https://www.wavebets.com"
 
 # predict get endpoint
 @application.route('/predict', methods=['GET'])
-def login():
+def predict():
     """
     Call Wavebets.com Prediction URL
     """
