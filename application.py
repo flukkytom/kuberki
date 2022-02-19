@@ -11,7 +11,7 @@ application = Flask(__name__)
 WAVEBET_URL = "https://www.wavebets.com"
 
 # predict get endpoint
-@application.route('/predict', methods=['GET'])
+@application.route('/', methods=['GET'])
 def predict():
     """
     Call Wavebets.com Prediction URL
